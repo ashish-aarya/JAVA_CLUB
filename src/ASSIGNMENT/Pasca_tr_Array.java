@@ -1,3 +1,4 @@
+
 package ASSIGNMENT;
 import java.util.Scanner;
 public class Pasca_tr_Array {

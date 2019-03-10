@@ -1,3 +1,4 @@
+
 package ASSIGNMENT;
 
 import java.util.Scanner;
@@ -37,3 +38,5 @@ public class Print_N_Binary {
 	    		   
 	}
 }
+
+

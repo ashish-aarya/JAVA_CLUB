@@ -1,3 +1,4 @@
+
 package ASSIGNMENT;
 import java.util.Scanner;
 public class Rain_water_trapping {
@@ -40,4 +41,3 @@ public class Rain_water_trapping {
 	        t--;
 	        }
 		}
-	}

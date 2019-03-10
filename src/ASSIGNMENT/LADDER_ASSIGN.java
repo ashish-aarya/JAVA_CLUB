@@ -1,5 +1,6 @@
+package ASSIGNMENT;
 import java.util.Scanner;
-public class Ladder{ 
+public class Ladder_ASSIGN{ 
   	public static void main(String[] args) {
 		// TODO Auto-generated method stub
     	System.out.println("NO.?");

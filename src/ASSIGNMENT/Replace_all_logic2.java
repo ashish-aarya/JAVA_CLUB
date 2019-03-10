@@ -1,4 +1,6 @@
-		import java.util.*;
+package ASSIGNMENT;
+
+import java.util.*;
 		public class Replace_all_logic2 {
 		    public static void main(String[] args) {
 		        Scanner s = new Scanner(System.in);

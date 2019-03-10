@@ -1,3 +1,4 @@
+
 package ASSIGNMENT;
 
 import java.lang.reflect.Array;
@@ -22,7 +23,7 @@ public class ARRAYS_TARGET_SUM_TRIPLETS {
 			for (int p2 = p1 + 1; p2 < n; p2++) {
 				for (int p3 = p2 + 1; p3 < n; p3++)
 					if (ar[p1] + ar[p2] + ar[p3] == target)
-						System.out.println(ar[p1] + " " + ar[p2] + " and " + ar[p3]);
+						System.out.println(ar[p1] + ", " + ar[p2] + " and " + ar[p3]);
 			}
 
 		}

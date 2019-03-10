@@ -1,3 +1,5 @@
+package ASSIGNMENT;
+
 import java.util.Scanner;
 
 public class Sum_odd_even_place {

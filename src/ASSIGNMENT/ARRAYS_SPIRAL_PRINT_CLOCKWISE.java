@@ -52,3 +52,4 @@ public static Scanner scr=new Scanner(System.in);
 
 		}
 	}
+

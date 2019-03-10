@@ -1,3 +1,4 @@
+
 package ASSIGNMENT;
 import java.util.Scanner;
 public class DELHIS_ODD_EVEN {
