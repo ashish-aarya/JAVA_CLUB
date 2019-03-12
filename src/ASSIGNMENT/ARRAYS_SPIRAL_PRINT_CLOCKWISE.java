@@ -26,22 +26,25 @@ public static Scanner scr=new Scanner(System.in);
 			maxcol = arr[0].length - 1;
 			int net = arr.length * arr[0].length;
 			while (count < net) {
-
-				for (int row = minrow; row <= maxrow && count < net; row++) {
-					System.out.print(arr[row][mincol] + ", ");
-					count++;
-				}		
-				mincol++;
 				for (int col = mincol; col <= maxcol && count < net; col++) {
-					System.out.print(arr[maxrow][col] + ", ");
+					System.out.print(arr[minrow][col] + ", ");
 					count++;
 				}
 				maxrow--;
+				for (int row = minrow; row <= maxrow && count < net; row++) {
+					System.out.print(arr[row][maxcol] + ", ");
+					count++;
+				}		
+				mincol++;
+				
 				for (int row = maxrow; row >= minrow && count < net; row--) {
 					System.out.print(arr[row][maxcol] + ", ");
 					count++;
-				}
-				maxcol--;
+				}maxcol--;
+				
+				
+				
+				
 				for (int col = maxcol; col>= mincol && count < net; col--) {
 					System.out.print(arr[minrow][col] + ", ");
 					count++;
