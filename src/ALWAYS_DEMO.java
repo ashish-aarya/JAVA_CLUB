@@ -1,40 +1,27 @@
 
-
-import java.util.Scanner;
-
+import java.util.ArrayList;
+import java.util.*;
 public class ALWAYS_DEMO {
-	public static Scanner scr = new Scanner(System.in);
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Enter");
-		String scn = scr.next();
-		//System.out.println(scn);
-		//System.out.println(odd_even(scn));
-		System.out.println(odd_even(scn));
-		//System.out.println(scn);
-
+		int n;
+		System.out.println("ENETE");
+		Scanner scr=new Scanner (System.in);
+		n=scr.nextInt();
+		
+		printLexicoCounting(0, n);
 	}
 
-	public static String odd_even(String S) {
-		StringBuilder sb = new StringBuilder(S);
-		StringBuilder ans = new StringBuilder();
-		char ch;
-		for (int i = 0; i < sb.length(); i++) {
-			if (i % 2 == 0) {
-				int n= (int)(sb.charAt(i));
-				
-				ch = (char)(++n);
-				ans.append(ch);
-			
-			} else {
-				int n= (int)sb.charAt(i);
-				ch = (char)(--n);
-				 ans.append(ch);
-				
-			}
+	public static void printLexicoCounting(int curr, int end) {
+		if (curr > end)
+			return;
+		System.out.print(curr+" ");
+		int i = 0;
+		if (curr == 0)
+			i = 1;
+		for (; i <= 9; i++) {
+			printLexicoCounting(curr * 10 + i, end);
 		}
-		return ans.toString();
 	}
-
 }

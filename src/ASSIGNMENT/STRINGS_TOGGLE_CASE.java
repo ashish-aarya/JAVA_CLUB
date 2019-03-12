@@ -17,9 +17,9 @@ public class STRINGS_TOGGLE_CASE {
 		{
 		char ch=str.charAt(i);
 		if (Character.isUpperCase(ch))
-			System.out.println(Character.toLowerCase(ch));
+			System.out.print(Character.toLowerCase(ch));
 		else 
-			System.out.println(Character.toUpperCase(ch));
+			System.out.print(Character.toUpperCase(ch));
 		}
 	}
 
