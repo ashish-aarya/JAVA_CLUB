@@ -9,32 +9,32 @@ public class CALCULATE_THE_SUM {
 		// TODO Auto-generated method stub
 		System.out.println("ENTER");
 		Scanner scr = new Scanner(System.in);
-		//int c = scr.nextInt();
-		
+		// int c = scr.nextInt();
+
 		int n = scr.nextInt();
 		// ArrayList<Integer> ar= new ArrayList<>();
 		int arr[] = new int[n];
-		int rt[]=new int [n];
-		int ans[] = new int[n];
+		int rt[] = new int[n];
+		
 		int sum = 0;
 		for (int i = 0; i < n; i++) {
 			arr[i] = scr.nextInt();
 		}
-			int val=scr.nextInt();
-			while (val-1>0)
-			{
-			rt=rotat(arr, val);
-			for (int j=0;j<n;j++)
-				ans[j]=arr[j]+rt[j];
-			val=val-1;
-			arr=ans;
+		int val = scr.nextInt();
+		while (val  > 0) {
+			int ans[] = new int[n];
+			rt = rotat(arr, val);
+			for (int j = 0; j < n; j++)
+				ans[j] = arr[j] + rt[j];
+			val = val - 1;
+			arr = ans;
 		}
-			for (int j=0;j<n;j++)
-				sum+=arr[j];
+		for (int j = 0; j < n; j++)
+			sum += arr[j];
 		int an = sum % ((int) Math.pow(10, 9) + 7);
 
 		System.out.println(an);
-			
+
 	}
 
 	public static int[] rotat(int ar[], int val) {
