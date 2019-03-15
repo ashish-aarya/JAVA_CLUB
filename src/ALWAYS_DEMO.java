@@ -1,27 +1,27 @@
 
 import java.util.ArrayList;
 import java.util.*;
+import java.util.Scanner;
+
 public class ALWAYS_DEMO {
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int n;
-		System.out.println("ENETE");
 		Scanner scr=new Scanner (System.in);
 		n=scr.nextInt();
-		
-		printLexicoCounting(0, n);
+		parenthesis(n, "", 0, 0);
 	}
 
-	public static void printLexicoCounting(int curr, int end) {
-		if (curr > end)
+	public static void parenthesis(int n, String ans, int open, int close) {
+		if (open == n && close == n) {
+			System.out.println(ans);
 			return;
-		System.out.print(curr+" ");
-		int i = 0;
-		if (curr == 0)
-			i = 1;
-		for (; i <= 9; i++) {
-			printLexicoCounting(curr * 10 + i, end);
 		}
+		if (open > n || close > n || close > open)
+			return;
+	
+		parenthesis(n, ans +")" , open, close + 1);
+		parenthesis(n, ans +"(" , open + 1, close);
 	}
+
 }

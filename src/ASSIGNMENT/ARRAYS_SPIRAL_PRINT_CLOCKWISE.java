@@ -30,26 +30,27 @@ public static Scanner scr=new Scanner(System.in);
 					System.out.print(arr[minrow][col] + ", ");
 					count++;
 				}
-				maxrow--;
+				minrow++;
 				for (int row = minrow; row <= maxrow && count < net; row++) {
 					System.out.print(arr[row][maxcol] + ", ");
 					count++;
 				}		
-				mincol++;
-				
-				for (int row = maxrow; row >= minrow && count < net; row--) {
-					System.out.print(arr[row][maxcol] + ", ");
-					count++;
-				}maxcol--;
-				
-				
-				
-				
+				maxcol--;
 				for (int col = maxcol; col>= mincol && count < net; col--) {
-					System.out.print(arr[minrow][col] + ", ");
+					System.out.print(arr[maxrow][col] + ", ");
 					count++;
 				}
-				minrow++;
+				maxrow--;
+				
+				for (int row = maxrow; row >= minrow && count < net; row--) {
+					System.out.print(arr[row][mincol] + ", ");
+					count++;
+				}mincol++;
+				
+				
+				
+				
+				
 
 			}
 
