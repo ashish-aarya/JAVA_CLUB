@@ -4,24 +4,33 @@ import java.util.*;
 import java.util.Scanner;
 
 public class ALWAYS_DEMO {
+
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n;
-		Scanner scr=new Scanner (System.in);
-		n=scr.nextInt();
-		parenthesis(n, "", 0, 0);
+		String sc;
+		Scanner scr= new Scanner(System.in);
+		String scn= scr.next ();
+		System.out.println(getSSAscii(scn));
 	}
-
-	public static void parenthesis(int n, String ans, int open, int close) {
-		if (open == n && close == n) {
-			System.out.println(ans);
-			return;
-		}
-		if (open > n || close > n || close > open)
-			return;
-	
-		parenthesis(n, ans +")" , open, close + 1);
-		parenthesis(n, ans +"(" , open + 1, close);
-	}
-
+public staticvoid getSSAscii (String str)
+{
+ if (str.length()==0)
+ {
+	 ArrayList<String> br=new ArrayList<>();
+	 br.add("");
+	 return br;
+ }
+ char ch=str.charAt(0);
+  String ros=str.substring(1);
+  ArrayList<String> rr=getSSAscii(ros);
+  ArrayList<String> mr=new ArrayList<>();
+  for (String val: rr)
+  {
+	  mr.add(val);
+	  mr.add(ch+val);
+	  mr.add((int)ch+val);
+  }
+  return mr;
+  }
 }
