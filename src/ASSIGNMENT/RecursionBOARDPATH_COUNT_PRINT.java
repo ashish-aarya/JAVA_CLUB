@@ -2,7 +2,7 @@ package ASSIGNMENT;
 
 import java.util.Scanner;
 
-public class BOARDPATH_COUNT_PRINT {
+public class RecursionBOARDPATH_COUNT_PRINT {
 static int count=0;
 	public static void main(String[] args) {
 	

@@ -30,14 +30,14 @@ public class Array_NextGreaterAndNextSmaller {
 			{
 				if (ar[i]<ar[j])
 				{
-					//for (int k=j;k<n;k++)
+					for (int k=j;k<n;k++)
 						if (ar[j]>ar[j+1])
 							System.out.println(ar[j+1]+" ");
 						else 
 							System.out.println("-1 ");
 				}
-				//else 
-					//System.out.println("-1 ");
+				else 
+					System.out.println("-1 ");
 			}
 		}
 	}
