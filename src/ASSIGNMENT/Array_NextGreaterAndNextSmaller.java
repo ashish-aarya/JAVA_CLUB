@@ -1,45 +1,58 @@
 package ASSIGNMENT;
+
 import java.util.*;
+
 public class Array_NextGreaterAndNextSmaller {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scr= new Scanner (System.in);
-		int t,n;
-		int []arr;
-		t=scr.nextInt();
-		while (t>0)
-		{
-			n=scr.nextInt();
-			arr=new int[n];
-			for (int i=0;i<n;i++)
-			{
-				arr[i]=scr.nextInt();	
+		System.out.println("Enter");
+		Scanner scr = new Scanner(System.in);
+		int t, n;
+		int[] arr;
+		t = scr.nextInt();
+		while (t > 0) {
+			n = scr.nextInt();
+			arr = new int[n];
+			for (int i = 0; i < n; i++) {
+				arr[i] = scr.nextInt();
 			}
 			NextgreaterNextsmaller(arr, n);
 			t--;
 		}
-		
-
 	}
-	public static void NextgreaterNextsmaller (int[] ar,int n)
-	{
-		for (int i=0;i<n;i++)
-		{
-			for (int j=1;j<n;j++)
-			{
-				if (ar[i]<ar[j])
-				{
-					for (int k=j;k<n;k++)
-						if (ar[j]>ar[j+1])
-							System.out.println(ar[j+1]+" ");
-						else 
-							System.out.println("-1 ");
+
+	public static void NextgreaterNextsmaller(int[] arr, int n) {
+		// TODO Auto-generated method stub
+		int j = 0;
+		for (int i = 0; i < n; i++) {
+			for (j = i + 1; j < n; j++) {
+				int flag = 0;
+				if (arr[i] < arr[j]) {
+					int k = 0;
+					flag = 1;
+					for (k = j + 1; k < n; k++) {
+						if (arr[j] > arr[k]) {
+							System.out.println(arr[k]);
+							break;
+						}
+
+					}
+					if (k == n) {
+						System.out.println(-1);
+						break;
+					}
 				}
-				else 
-					System.out.println("-1 ");
+
+				if (flag == 1) {
+					break;
+				}
+
 			}
+			if (j == n) {
+				System.out.println(-1);
+			}
+
 		}
 	}
-
 }

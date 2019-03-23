@@ -33,3 +33,28 @@ public class ALWAYS_DEMO {
 	}
 
 }
+public static void NextgreaterNextsmaller(int[] ar, int n) {
+	for (int i = 0; i < n; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (ar[i] < ar[j]) {
+				for (int k = j + 1; k < n; k++) {
+					if (ar[j] > ar[k]) {
+						{
+							System.out.println(ar[j + 1] + " ");
+							return;
+						}
+					}
+				}
+				// else {
+				// System.out.println("-1 ");
+				// return;
+				// }
+			}
+			// else
+			// System.out.println("-1 ");
+		}
+		System.out.println("-1 ");
+	}
+
+}
+}
