@@ -1,60 +1,42 @@
-
-import java.util.ArrayList;
-import java.util.*;
 import java.util.Scanner;
-
-public class ALWAYS_DEMO {
-	static int count=0;
-	public static void main(String[] args) {
-		int n1, n2;
-		Scanner scr = new Scanner(System.in);
-		n1 = scr.nextInt();
-		n2 = scr.nextInt();
-		printMazePathD(0, 0, n1-1, n2-1, "");
-		System.out.println(count);
+import java.util.Arrays;
+import java.util.*;
+public class ALWAYS_DEMO {	
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner scr=new Scanner (System.in);
+	String str=new String();
+	str=scr.next();
+	str=toReverse(str);
+	//System.out.println(str);
+		System.out.println(getSSAscii(str));
 	}
-
-	public static void printMazePathD(int cr, int cc, int er, int ec, String ans) {
-
-		if (cr == er && cc == ec) {
-			count++;
-			System.out.print(ans+" ");
-			return;
-		}
-
-		if (cr > er || cc > ec) {
-			return;
-		}
-		printMazePathD(cr + 1, cc, er, ec, ans + "V");
-		printMazePathD(cr, cc + 1, er, ec, ans + "H");
-		
-		printMazePathD(cr + 1, cc + 1, er, ec, ans + "D");
-
-	}
-
-}
-public static void NextgreaterNextsmaller(int[] ar, int n) {
-	for (int i = 0; i < n; i++) {
-		for (int j = i + 1; j < n; j++) {
-			if (ar[i] < ar[j]) {
-				for (int k = j + 1; k < n; k++) {
-					if (ar[j] > ar[k]) {
-						{
-							System.out.println(ar[j + 1] + " ");
-							return;
-						}
-					}
-				}
-				// else {
-				// System.out.println("-1 ");
-				// return;
-				// }
-			}
-			// else
-			// System.out.println("-1 ");
-		}
-		System.out.println("-1 ");
-	}
-
+public static void getSSAscii (String str,String ans )
+{
+ if (str.length()==0)
+ {
+	String br=new String());
+	 br.
+	 return ;
+ }
+ char ch=str.charAt(0);
+  String ros=str.substring(1);
+  ArrayList<String> rr=getSSAscii(ros);
+  ArrayList<String> mr=new ArrayList<>();
+  for (String val: rr)
+  {
+	  mr.add(val);
+	  mr.add(ch+val);
+	  mr.add((int)ch+val);
+  }
+  return mr;
+  }
+public static String toReverse (String str)
+{String rev=new String();
+rev="";
+	for (int i=str.length()-1;i>=0;i--)
+		rev+=str.charAt(i);
+return rev;
 }
 }
+
