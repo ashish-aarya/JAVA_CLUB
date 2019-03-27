@@ -1,3 +1,5 @@
+package ASSIGNMENT;
+
 import java.util.Scanner;
 
 public class COUNT_DIGITS {

@@ -1,4 +1,4 @@
-
+package PATTERN;
 import java.util.*;
 import java.util.Scanner;
 public class Holle_romb_assign {

@@ -1,3 +1,5 @@
+package PATTERN;
+
 import java.util.*;
 import java.util.Scanner;
 
@@ -19,7 +21,7 @@ public class HOLLOWDIAMONDPATTERN {
 
 				System.out.print("*");
 			for (sp = 2; sp <= nsp; sp++)
-				System.out.print(".");
+				System.out.print(" ");
 
 			for (st = 1; st <= nst; st++)
 				if (row != 1 && st != 1 || row != n && st != n)

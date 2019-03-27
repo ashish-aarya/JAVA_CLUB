@@ -11,7 +11,7 @@ public class Recursion_SubSequence_ASCII {
 		System.out.println("ENTER");
 		String str = new String();
 		str = scr.next();
-		str=toReverse(str);
+		//str=toReverse(str);
 		//System.out.println(str);
 		printSSASCII(str,"");
 		System.out.println("\n"+count);
