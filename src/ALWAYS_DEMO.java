@@ -1,42 +1,48 @@
-import java.util.Scanner;
-import java.util.Arrays;
 import java.util.*;
-public class ALWAYS_DEMO {	
-public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	Scanner scr=new Scanner (System.in);
-	String str=new String();
-	str=scr.next();
-	str=toReverse(str);
-	//System.out.println(str);
-		System.out.println(getSSAscii(str));
-	}
-public static void getSSAscii (String str,String ans )
-{
- if (str.length()==0)
- {
-	String br=new String());
-	 br.
-	 return ;
- }
- char ch=str.charAt(0);
-  String ros=str.substring(1);
-  ArrayList<String> rr=getSSAscii(ros);
-  ArrayList<String> mr=new ArrayList<>();
-  for (String val: rr)
-  {
-	  mr.add(val);
-	  mr.add(ch+val);
-	  mr.add((int)ch+val);
-  }
-  return mr;
-  }
-public static String toReverse (String str)
-{String rev=new String();
-rev="";
-	for (int i=str.length()-1;i>=0;i--)
-		rev+=str.charAt(i);
-return rev;
-}
-}
+public class ALWAYS_DEMO{
 
+	public static void main(String[] args) {
+Scanner scr=new Scanner (System.in);
+int n;
+int tc=scr.nextInt();
+while (tc>0)
+{
+n=scr.nextInt();
+		int[] arr =new int [n];
+		for (int i=0;i<n;i++)
+		arr[i]=scr.nextInt();
+		
+		System.out.println(arrayGame(arr, 0, arr.length - 1));
+
+    tc--;
+}
+	}
+
+	public static int arrayGame(int[] arr, int lo, int hi) {
+
+		for (int mid = lo; mid < hi; mid++) {
+
+			int sum1 = 0;
+			for (int i = lo; i <= mid; i++) {
+				sum1 += arr[i];
+			}
+
+			int sum2 = 0;
+			for (int i = mid + 1; i <= hi; i++) {
+				sum2 += arr[i];
+			}
+
+			if (sum1 == sum2) {
+
+				int ans1 = arrayGame(arr, lo, mid);
+				int ans2 = arrayGame(arr, mid + 1, hi);
+
+				return Math.max(ans1, ans2) + 1;
+			}
+
+		}
+
+		return 0;
+
+	}
+}
