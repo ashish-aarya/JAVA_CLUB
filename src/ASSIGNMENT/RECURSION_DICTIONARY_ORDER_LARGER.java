@@ -1,8 +1,15 @@
-import java.util.*;
-public class ALWAYS_DEMO{
-public static void main(String[] args) {
+package ASSIGNMENT;
 
-	printPermutation("cab", "", false);
+import java.util.Scanner;
+
+public class RECURSION_DICTIONARY_ORDER_LARGER {
+public static void main(String[] args) {
+String str;
+Scanner scr=new Scanner (System.in);
+str=scr.next();
+System.out.println(str);
+
+	printPermutation("cba", "", false);
 }
 
 public static void printPermutation(String ques, String ans, String os) {
