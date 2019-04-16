@@ -7,6 +7,7 @@ public class PRATEEK_SIR_AND_CODING {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		LinkedList<Integer> list = new LinkedList<>();
 		int n;
 		Scanner scr = new Scanner(System.in);
