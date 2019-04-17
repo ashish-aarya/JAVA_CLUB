@@ -16,7 +16,7 @@ public class NextPermutation {
 
 			int i = arr.length - 2;
 
-			while (i >= 0 && arr[i] > arr[i + 1]) {
+			while (i >= 0 && arr[i] >= arr[i + 1]) {
 				i--;
 			}
 
@@ -26,7 +26,7 @@ public class NextPermutation {
 
 				while (j < arr.length) {
 
-					if (arr[j] < arr[jl] && arr[j] > arr[i]) {
+					if (arr[j] <= arr[jl] && arr[j] > arr[i]) {
 						jl = j;
 					}
 					j++;
