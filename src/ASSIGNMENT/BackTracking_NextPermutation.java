@@ -4,18 +4,21 @@ import java.util.Scanner;
 
 public class BackTracking_NextPermutation {
 	public static void main(String[] args) {
-		int tc;
-		Scanner scr = new Scanner(System.in);
-		tc = scr.nextInt();
-		while (tc > 0) {
-			int n = scr.nextInt();
 
+		Scanner scn = new Scanner(System.in);
+
+		int tc = scn.nextInt();
+
+		while (tc-- > 0) {
+
+			int n = scn.nextInt();
 			int[] arr = new int[n];
 			for (int i = 0; i < n; i++)
-				arr[i] = scr.nextInt();
+				arr[i] = scn.nextInt();
+
 			int i = arr.length - 2;
 
-			while (i >= 0 && arr[i] > arr[i + 1]) {
+			while (i >= 0 && arr[i] >= arr[i + 1]) {
 				i--;
 			}
 
@@ -25,7 +28,7 @@ public class BackTracking_NextPermutation {
 
 				while (j < arr.length) {
 
-					if (arr[j] < arr[jl] && arr[j] > arr[i]) {
+					if (arr[j] <= arr[jl] && arr[j] > arr[i]) {
 						jl = j;
 					}
 					j++;
@@ -49,11 +52,10 @@ public class BackTracking_NextPermutation {
 			}
 
 			for (int val : arr) {
-				System.out.print(val+" ");
+				System.out.print(val + " ");
 			}
 			System.out.println();
-			tc--;
-		}
 
+		}
 	}
 }
