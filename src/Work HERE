@@ -1,11 +1,100 @@
-class prg
-{
-public HashMap<Integer> wok (int n)
-{
-Hashmap 
-}
-void main ()
-{
-System.out.println ("Terminal Work");
-}
-// enter the profile data
+//queue 
+ZIGZAG????
+
+
+
+
+//Akash And aarray
+sort the ar ay and 
+take the two array and inc and dec the part of the array
+
+
+
+//split array 
+
+
+
+
+//next permutation
+make next permutation no . 
+swap the no.
+
+
+//dictonary larger 
+make call .-> look for next perm. smaller ->take boolean and org string compare the strings
+
+
+
+//ladder ques 
+SEIVE AND QUICK SOrt 
+store last to the first  and  contid... it 
+
+
+//chessBoard 
+backtrack  calls 0033ans
+
+
+
+chess board 2
+cr*(ec+1)+(cc+1)
+
+
+
+//SODOKU 
+backtracking 
+check for the arrangements and the check for the best that can be placed 
+backtracking will have a same frame as we go back .
+in a 3*3 array of sodoku r-r%3;   r= row where we are
+row cell col
+
+while backtracking make func. boolean to make it print and as in back track the value gets zero 
+..boolean data will be 
+
+
+
+
+
+//hoodie 
+check for the empty case for 0
+
+// histogram
+
+lt min   and rt min 
+(r-l-1)*x
+
+
+in case of the stack grt empty area will be 
+r*x;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+leet code -website ques
+
+
+
+
+
+
+
+
+
+
+
+
+
